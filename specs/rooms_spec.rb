@@ -53,6 +53,8 @@ class TestRooms < Minitest::Test
     @room1.add_guest_to_room(@guest3)
     @room1.add_guest_to_room(@guest4)
     assert_equal(4, @guests.length)
+    @room1.checkout_guest(@guest1)
+    assert_equal(3, @guest.length)
   end
 
   def test_checkout_guest__guest_not_there

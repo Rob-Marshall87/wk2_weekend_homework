@@ -14,6 +14,12 @@ class Rooms
     return "Not enough capacity."
   end
 
-  
+  def checkout_guest(guest)
+    if @guests.include?(guest) == true
+      @guests.delete(guest)
+    end
+    return "Guest not in this room."
+  end
+
 
 end
